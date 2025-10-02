@@ -1,0 +1,349 @@
+/*
+filename: layout.css
+author: Nguyen Bao Thien Phuc
+created: 02/10/2025
+last modified: 02/10/2025
+description: Styling for layout.html
+*/
+
+aside:hover {
+    display: block;
+}
+
+/* Make menu paragraphs display inline */
+.menu {
+    display: inline-block;
+}
+
+/* Remove list style for navigation lists */
+nav ul {
+    list-style: none;
+}
+
+aside {
+    border: 2px solid #ccc;
+    margin: 1em;
+    padding: 1em;
+    background-image: url('images/fade.jpg');
+    background-repeat: no-repeat;
+    background-position: right bottom;
+}
+
+/* Header styling */
+header {
+    border: 1px solid darkgray;
+    margin: 0.5em;
+    padding: 0.5em;
+    background-color: lightgray;
+    text-align: center;
+}
+
+/* Footer border on top only */
+footer {
+    border-top: 4px double #666;
+    clear: both;
+}
+
+/* Sizing and positioning */
+aside {
+    border: 2px solid #ccc;
+    margin: 1em;
+    padding: 1em;
+    background-image: url('images/fade.jpg');
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    width: 30%;
+    float: right;
+    box-shadow: 10px 10px 5px #aaaaaa;
+}
+
+/* Float lists section to the left */
+#lists {
+    float: left;
+}
+
+/* Center table */
+table {
+    margin: auto;
+}
+
+/* Float tables section to the right */
+#tables {
+    float: right;
+}
+
+/* Clear hyperlinks section */
+#hyperlinks {
+    clear: both;
+    float: left;
+}
+
+/* Float images section to the right */
+#images {
+    float: right;
+}
+
+/* Border for figure element */
+figure {
+    border: 2px solid #ccc;
+}
+
+/* Set widths for sections in two columns */
+#lists, #tables, #hyperlinks, #images {
+    text-align: center;
+    width: 50%;
+}
+
+/* Fix list alignment */
+ol, ul, dl {
+    text-align: left;
+}
+
+/* Set minimum width for article */
+article {
+    min-width: 30em;
+}
+
+/* Footer paragraph styling */
+footer p {
+    display: inline-block;
+    width: 33%;
+}
+
+footer p:first-child {
+    float: left;
+}
+
+footer p:nth-child(2) {
+    text-align: center;
+}
+
+footer p:last-child {
+    float: right;
+    text-align: right;
+}
+
+
+/* ---------- Universal Selector ---------- */
+* {
+    font-family: calibri, sans-serif;
+    color: #2F4F4F;
+}
+
+/* ---------- Headings ---------- */
+h1 {
+    color: purple;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+h2 {
+    color: rgb(0,128,128);
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+h1, h2, h3 {
+    font-family: arial, sans-serif;
+}
+
+/* ---------- Aside & Footer ---------- */
+aside, footer {
+    font-style: italic;
+}
+
+/* ---------- Table Styling ---------- */
+table, th, td {
+    border: 3px double black;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 0.4em;
+}
+
+/* Right-align column headers */
+.right-align {
+    text-align: right;
+}
+
+/* ---------- ID Selectors ---------- */
+#images {
+    text-align: center;
+}
+
+/* Apply to Headings */
+#headings-sub {
+    color: red;
+}
+
+/* ---------- Class Selectors ---------- */
+.special {
+    color: darkorange;
+    font-weight: bold;
+}
+
+/* ---------- Navigation Menu ---------- */
+nav a {
+    text-decoration: none;
+    padding: 0.2em 0.6em;
+    border: 4px solid #ccc;
+    margin-right: 0.3em;
+    display: inline-block;
+}
+
+nav a:hover {
+    background-color: lightblue;
+    border-color: darkblue;
+}
+
+/* ---------- Lists ---------- */
+ol ul {
+    list-style-type: square;
+}
+
+/* ---------- Pseudo-classes ---------- */
+aside:hover {
+    display: none;
+}
+
+/* ---------- Images ---------- */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 1em 0;
+}
+
+/* Half-width image */
+.half-image {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Separator below image with spacing (approx 2-3 lines) */
+.image-separator {
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+/* Page number aligned to bottom-right under separator */
+.page-number {
+    text-align: right;
+    margin-top: 0;
+    margin-bottom: 1.5em; 
+}
+
+/* ---------- Vertical Left Line Segments ---------- */
+.vline-left {
+    border-left: 4px solid #ADD8E6;
+    padding-left: 1.2em;          
+    margin-left: 6ch;            
+    overflow: hidden;        
+}
+
+/* Make the blue line stop exactly at the image bottom */
+.vline-left a:last-child { display: block; }
+.vline-left a:last-child img { margin-bottom: 0; }
+
+/* Remove vertical gap between header and article wrappers */
+header { margin-bottom: 0; }
+article { margin-top: 0; }
+
+/* Match text indent to vline-left without drawing the line */
+.align-with-vline {
+    margin-left: calc(6ch + 1.2em + 4px);
+}
+
+/* Black horizontal */
+.page-separator {
+    border: 0;
+    border-top: 2px solid #000;
+    margin: 5.5em 0 0.5em; 
+}
+
+/* ---- Outer frame around the whole page ---- */
+html { 
+    border: none;                    
+}
+
+body {
+    margin: 4.5ch;                    
+    border: 2px solid #999;          
+    padding: 1.5ch;                    
+}
+
+/* ---- Center footer text (override earlier floats/layout) ---- */
+footer {
+    text-align: center;
+}
+
+footer p {
+    float: none;       
+    display: inline-block;
+    width: auto;         
+    text-align: center;
+}
+
+/* ---- Center the cat image in Images section ---- */
+#images img {
+    margin: 1em auto;     
+}
+
+
+body { padding-top: 0.1ch; }
+header { margin-top: 0; }
+header h1 { margin-top: 0; }
+
+/* Center footer text and place it clearly below the double line */
+footer {
+    border-top: 4px double #666; 
+    clear: both;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding-top: 1em;   
+    padding-bottom: 1em;
+}
+footer p {
+    float: none;
+    display: inline-block;
+    width: auto;
+    text-align: center;
+    margin: 0;     
+}
+
+/* ---- Two-tone border for the aside (black + light purple ) with rounded corners ---- */
+aside {
+    border: none; 
+    border-top: 4px solid #000;   
+    border-left: 4px solid #000; 
+    border-right: 4px solid #DDA0DD; 
+    border-bottom: 4px solid #DDA0DD;
+    border-radius: 14px;         
+    overflow: hidden;            
+}
+
+/* ---- Add a small gray strip at the very top inside the aside ---- */
+aside {
+    position: relative;               
+    background-image: none;         
+    background-color: #ffffff;      
+    padding-top: 1em;               
+}
+
+aside::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 30px;                  
+    background: #e0e0e0;             
+    border-top-left-radius: 14px;    
+    border-top-right-radius: 14px;
+}
